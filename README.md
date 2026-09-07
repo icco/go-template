@@ -1,13 +1,14 @@
 # go-template
 
-Template for new Go repos under `github.com/icco`. Config only — no Go source, so there is nothing to delete after you copy it.
+Template for new Go repos under `github.com/icco`. Config only — no Go source to unpick.
 
 ## After creating a repo from this template
 
 1. **`go mod init github.com/icco/<repo>`.** Every workflow reads `go-version-file: go.mod`, so CI fails until the module exists.
 2. **Replace `PROJECT_NAME` in `.goreleaser.yaml`** (4 occurrences: `project_name`, `release.github.name`, and twice in the release footer). Left unsubstituted, the first release publishes into a repo that does not exist.
 3. **Check Actions are enabled** — `gh api repos/icco/<repo>/actions/permissions`. They are deliberately disabled on this template so its own workflows never fire; children should inherit the org default of enabled, but confirm once.
-4. **Update the `LICENSE` copyright year** if the year has rolled over.
+4. **Replace this `README.md`** with the new repo's own. GitHub copies it across verbatim, so a fresh repo otherwise ships a README describing itself as a template.
+5. **Update the `LICENSE` copyright year** if the year has rolled over.
 
 ## Choices baked in
 
