@@ -31,6 +31,6 @@ release:
   mode: replace
   footer: |
     ---
-    Install with `go get github.com/icco/PROJECT_NAME@{{ .Tag }}`.
+    Install with `go get go.icco.me/PROJECT_NAME@{{ .Tag }}`.
 
     **Full Changelog**: https://github.com/icco/PROJECT_NAME/compare/{{ .PreviousTag }}...{{ .Tag }}
